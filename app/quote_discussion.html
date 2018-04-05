@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Simply Serene</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+</head>
+<body class="colored">
+<div class="container">
+<a href="discussion.html" class="continue">
+Continue
+</a>
+<div class="loading">
+	<div id="quote" class="quote"></div>
+	</div>
+	</div>
+	<script type="text/javascript">
+			(function(){
+	  			var arrays = [
+	    			{ quote:"At the end of the day, tell yourself gently: ‘I love you, you did the best you could today, and even if you didn’t accomplish all you had planned, I love you anyway.",
+	    			  author:"Anonymous"},
+	    			{ quote:"Just when the caterpillar thought the world was ending, he turned into a butterfly.",
+	    			  author:"Proverb"},
+	    			  { quote:"In the end, just three things matter: How well we have lived. How well we have loved. How well we have learned to let go",
+	    			  author:"Jack Kornfield"},
+	    			  { quote:"Everything you have ever wanted, is sitting on the other side of fear.",
+	    			  author:"George Addair"},
+	    			  { quote:"Smile, breathe, and go slowly.",
+	    			  author:"Thich Nhat Hanh"},
+	    			  { quote:"All our dreams can come true if we have the courage to pursue them.",
+	    			  author:"Walt Disney"},
+	    			  { quote:"If you can’t fly then run, if you can’t run then walk, if you can’t walk then crawl, but whatever you do you have to keep moving forward.",
+	    			  author:"Martin Luther King Jr."},
+	    			  { quote:"I tell you the past is a bucket of ashes, so live not in your yesterdays, not just for tomorrow, but in the here and now. Keep moving and forget the post mortems; and remember, no one can get the jump on the future.",
+	    			  author:"Carl Sandburg"},
+	    			  { quote:"The man who moves a mountain begins by carrying away small stones.",
+	    			  author:"Confucius"},
+	    			  { quote:"There is no chance, no destiny, no fate, that can hinder or control the firm resolve of a determined soul.",
+	    			  author:"Ella Wheeler Wilcox"},
+	    			  { quote:"By being yourself, you put something wonderful in the world that was not there before.",
+	    			  author:'Edwin Elliot'},
+	    			  { quote:"You must learn to let go. Release the stress. You were never in control anyway.",
+	    			  author:"Steve Maraboli"},
+	    			  { quote:"If you can dream it, you can do it.",
+	    			  author:"Walt Disney"},
+	    			  { quote:"Be not afraid of life. Believe that life is worth living, and your belief will help create the fact.",
+	    			  author:"William James"},
+	    			  { quote:"Believe in yourself and all that you are. Know that there is something inside of you that is greater than any obstacle.",
+	    			  author:"Christian D Larson"},
+	    			  { quote:"The greatest weapon against stress is our ability to choose one thought over another.",
+	    			  author:"William James"},
+	    			  { quote:"What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+	    			  author:"Henry S. Haskins"},
+	    			  { quote:"You have a treasure within you that is infinitely greater than anything the world can offer.",
+	    			  author:"Eckhart Tolle"},
+	    			  { quote:"Sometimes the bad things that happen in our lives put us directly on the path to the most wonderful things that will ever happen to us.",
+	    			  author:"Nicole Reed"},
+	    			  { quote:"Don’t be pushed by your problems. Be led by your dreams.",
+	    			  author:"Ralph Waldo Emerson"},
+	    			  { quote:"Every moment is a fresh beginning.",
+	    			  author:" T.S. Eliot"},
+	    			  { quote:"If you don’t like something change it; if you can’t change it, change the way you think about it.",
+	    			  author:"Mary Engelbreit"},
+	    			  { quote:"Peace is the result of retraining your mind to process life as it is, rather than as you think it should be.",
+	    			  author:"Wayne W. Dyer"},
+	    			  { quote:"Difficult roads often lead to beautiful destinations. The best is yet to come.",
+	    			  author:"Zig Ziglar"}
+	  			];
+
+	  			var floatIndex = (Math.random()*arrays.length);
+	  			var randomIndex = Math.round(floatIndex);
+	  			var selectedQuote =arrays[randomIndex];
+	  			
+	  			document.getElementById("quote").innerHTML = '<div><span class="q">' + selectedQuote.quote + '</span><span class="a"><br><br>' + selectedQuote.author + '</span></div>';
+				
+			}());
+
+	</script>
+</body>
+</html>

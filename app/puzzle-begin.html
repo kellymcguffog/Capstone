@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simply Serene</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/pure-min.css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/yahoo/pure-release/v0.6.0/grids-responsive-min.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="animate.css">
+    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.8.21/jquery-ui.min.js"></script>
+    <script src="jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript" src="jquery.snap-puzzle.js"></script>
+    <style>
+        /* Pure CSS */
+        .pure-button { margin: 5px 0; text-decoration: none !important; }
+        .button-lg { margin: 5px 0; padding: .65em 1.6em; font-size: 105%; }
+
+        /* required snapPuzzle styles */
+        .snappuzzle-wrap { position: relative; display: block; }
+        .snappuzzle-pile { position: relative; }
+        .snappuzzle-piece { cursor: move; }
+        .snappuzzle-slot { position: absolute; background: #fff; opacity: .8; }
+        .snappuzzle-slot-hover { background: #eee; }
+    </style>
+</head>
+<body class="backgroundImage">
+    <div class="container">
+        <div class="header">
+            <div class="back-puzzle">
+                <a href="home.html"><img src="arrow.png" class="home"></a>
+            </div>
+            <div class="logo">
+                <h5 class="simply-logo">Simply serene</h5>
+            </div>
+            <div class="space"></div>
+        </div>
+        <div class="difficulty_levels">
+            <h3 class="difficulty">Choose a Difficulty level:</h3>
+            <div class="beginner">
+                <img class="piece" src="beginner.png"><a href="#" class="level restart-puzzle" data-grid="5">Beginner</a>
+            </div>
+            <div class="intermediate">
+                &nbsp; <img class="piece" src="intermediate.png"><a href="#" class="level restart-puzzle" data-grid="7">Intermediate</a>
+            </div>
+            <div class="expert">
+                &nbsp; <img class="piece" src="expert.png"><a href="#" class="level restart-puzzle" data-grid="10">Expert</a>
+            </div>
+        </div>
+        <div id="puzzle-containment">
+            <div class="pure-g" style="max-width:1280px;margin:auto">
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div style="margin:10px">
+                        <img id="source_image" class="pure-img" src="http://backgroundcheckall.com/wp-content/uploads/2017/12/peaceful-background-images-8.jpg">
+                    </div>
+                </div>
+                <div class="pure-u-1 pure-u-md-1-2">
+                    <div id="pile" style="margin:10px">
+                        <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%">
+                            <h2 class="congrats" style="margin:0 0 20px">Well done!</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a id="start-button" class="restart-puzzle" data-grid="3">Restart</a>
+    </div>
+<script type="text/javascript">
+$(document).ready(function(){
+    function start_puzzle(x){
+        $('#puzzle_solved').hide();
+        $('#source_image').snapPuzzle({
+            rows: x, columns: x,
+            pile: '#pile',
+            containment: '#puzzle-containment',
+            onComplete: function(){
+                $('#source_image').fadeOut(150).fadeIn();
+                $('#puzzle_solved').show();
+                $('#puzzle_solved').addClass('animated zoomIn');
+            }
+        });
+    }
+    $(function(){
+        $('#pile').height($('#source_image').height());
+        start_puzzle(3);
+
+        $('.restart-puzzle').click(function(){
+            $('#source_image').snapPuzzle('destroy');
+            start_puzzle($(this).data('grid'));
+        });
+
+        $(window).resize(function(){
+            $('#pile').height($('#source_image').height());
+            $('#source_image').snapPuzzle('refresh');
+        });
+    });
+});
+
+</script>
+</body>
+</html>
