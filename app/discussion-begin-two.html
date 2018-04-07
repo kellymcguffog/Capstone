@@ -23,14 +23,14 @@
 			<div class="discussion-activity-description">
 				<div class="question">
 				<h1 class="step">Step Two:</h1>
-				<h3 class="topic">Evaluate and challenge your “anxious” thinking</h3>
+				<h3 class="topic">Evaluate and challenge your &#8220;anxious&#8221; thinking</h3>
 				<p class="suggestions">Am I falling into a thinking trap?</p>
 				<input size="35"></input>
-				<p class="suggestions">Am I basing my judgment on the way I “feel” instead of the “facts”?</p>
+				<p class="suggestions">Am I basing my judgment on the way I &#8220;feel&#8221; instead of the &#8220;facts&#8221;?</p>
 				<input size="35"></input>
 				<p class="suggestions">Am I 100% sure that I will mess up?</p>
 				<input size="35"></input>
-				<p class="suggestions">What’s the worst that could happen? If the worst did happen, what could I do to cope with it?</p>
+				<p class="suggestions">What&#8217;s the worst that could happen? If the worst did happen, what could I do to cope with it?</p>
 				<input size="35"></input>
 				</div>
 			</div>
@@ -46,7 +46,17 @@
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
-
+$('body').css('display', 'none');
+	$('body').fadeIn(500);
+	$('a').click(function(e) {
+		e.preventDefault();
+		newLocation = this.href;
+		$('body').fadeOut('slow', newpage);
+	});
+	function newpage() {
+		window.location = newLocation;
+	}
+ 
 });
 
 </script>

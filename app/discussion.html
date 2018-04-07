@@ -22,8 +22,8 @@
 		<div class="activity">
 			<div class="activity-description">
 				<img src="discussion-icon-purple.png" class="discussion-intro">
-				<h3 class="activity-name">Disucssion</h3>
-				<p class="start-page">You can answer these questions in the space provided, on a separate sheet of paper, or aloud to yourself. These questions are meant to change the way you think about a situation. Imagining positive events, served to counteract the negative effects of worry. This can improve the overall experience of anxiety.</p>
+				<h3 class="activity-name">Discussion</h3>
+				<p class="start-page">You can answer these questions in the space provided, on a separate sheet of paper, or aloud. Your responses will not be saved. These questions are meant to change the way you think about a situation. Imagining positive events counteracts the negative effects of worry, improving the overall experience of anxiety.</p>
 			</div>
 			<div class="start">
 				<a href="discussion-begin.html" id="start-button">start</a>
@@ -31,14 +31,18 @@
 		</div>
 	</div>
 <script type="text/javascript">
-// $(document).ready(function(){
-// 	$('.header').hide().delay(3500).fadeIn('slow');
-// 	$('.activity').hide().delay(3500).fadeIn('slow');
-//  setTimeout(function(){
-//  	$('.colored').css('background-image', "url(bckgrd-38.svg)");
-//  	$('.loading').fadeOut('slow');
-//  }, 3000);
-// });
+$(document).ready(function(){
+$('body').css('display', 'none');
+	$('body').fadeIn(500);
+	$('a').click(function(e) {
+		e.preventDefault();
+		newLocation = this.href;
+		$('body').fadeOut('slow', newpage);
+	});
+	function newpage() {
+		window.location = newLocation;
+	}
+});
 
 </script>
 </body>

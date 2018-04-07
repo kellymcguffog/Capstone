@@ -24,11 +24,11 @@
 			<div class="tool-activity-description">
 				<h3 class="topic_tool down_one">Self-Soothing <i class="fas fa-angle-down"></i></h3>
 				<p class="suggestions_tool group_one"><b>Just Breathe.</b> One of the most effective ways to activate the relaxation response is by decreasing the heart rate with deep breathing techniques.</p>
-				<p class="suggestions_tool group_one"><b>Get Organized.</b> We often get anxious or stressed out because we feel like we’ve forgotten to do something. Eliminate that by using a calendar. Being organized will stave off some stress and anxiety because you’re not so flustered.</p>
+				<p class="suggestions_tool group_one"><b>Get Organized.</b> We often get anxious or stressed out because we feel like we&#8217;ve forgotten to do something. Eliminate that by using a calendar. Being organized will stave off some stress and anxiety because you&#8217;re not so flustered.</p>
 				<p class="suggestions_tool group_one"><b>No Caffeine or Alcohol.</b> Studies have found that the stimulating effects of caffeine can cause anxiety, trigger panic attacks, and increase feelings of nervousness and irritability.</p>
 				<p class="suggestions_tool group_one"><b>Eat Well-Balanced Meals.</b> Eating the right foods our bodies need will help stave off stress and anxiety. Fruits, veggies, and foods with high omega-3 fatty acids have been shown to reduce stress.</p>
 				<p class="suggestions_tool group_one"><b>Chew Gum.</b> Chewing gum reduces cortisol levels to ease stress.</p>
-				<p class="suggestions_tool group_one"><b>Get a Good Night's Sleep.</b> Losing just a few hours of sleep increases feelings of stress, anger, sadness, and exhaustion.</p>
+				<p class="suggestions_tool group_one"><b>Get a Good Night&#8217;s Sleep.</b> Losing just a few hours of sleep increases feelings of stress, anger, sadness, and exhaustion.</p>
 				<p class="suggestions_tool group_one"><b>Take a Nap.</b> Naps reduce cortisol levels, which decreases stress.</p>
 				<p class="suggestions_tool group_one"><b>Get a Massage.</b> A relaxing massage will help ease your body of tension and free your mind of the worries and stresses of the day.</p>
 				<p class="suggestions_tool group_one"><b>Use a Heating Pad.</b>Heat relieves tension and stress around the neck and shoulders. You can also put the heating pad on your chest when you feel anxious to help relieve that feeling.</p>
@@ -50,26 +50,37 @@
 				<h3 class="topic_tool down_four">Emotional Awareness<i class="fas fa-angle-down"></i></h3>
 				<p class="suggestions_tool group_four"><b>Positive Self-Talk.</b> To increase emotional comfort, it's imperative to practice reassuring and realistic self-talk. When anxious, practice self-talk phrases such as: <br><br>"This feeling will pass."
 
- <br><br>"I will get through this."
+ <br><br>&#8220;I will get through this.&#8221;
 
- <br><br>"I am safe right now."
+ <br><br>&#8220;I am safe right now.&#8221;
 
- <br><br>"I am feeling anxious now, but I have the power make myself calm."
+ <br><br>&#8220;I am feeling anxious now, but I have the power make myself calm.&#8221;
 
- <br><br>"I can feel my heart rate slowing down."</p>
+ <br><br>&#8220;I can feel my heart rate slowing down.&#8221;</p>
 
  <p class="suggestions_tool group_four"><b>Write Down Your Worries.</b> Keeping a journal is a great way to express all of your feelings and learn from them. Grab a pen and a notebook and write down all of your stresses and what makes you anxious.</p>
 
 				<h3 class="topic_tool down_five">Mindfulness <i class="fas fa-angle-down"></i></h3>
-				<p class="suggestions_tool group_five"><b>Focus on the Here and Now.</b> Stress typically strikes when we’re stuck in the past or fretting about the future, Hibbert said. She suggested the following strategies to focus on the present:“At any given moment in the day, simply stop, take a deep breath, and notice where you are, notice what is happening [and] take it all in.Imagine a big brick wall popping up that blocks you from thinking of anything but what’s right in front of you.Get in tune with your senses: Take a walk, feel the ground beneath your feet, smell the flowers in the air, listen to the birds chirping. You will decrease your anxiety and increase your joy by learning to focus on now.”</p>
+				<p class="suggestions_tool group_five"><b>Focus on the Here and Now.</b> Stress typically strikes when we&#8217;re stuck in the past or fretting about the future, Hibbert said. She suggested the following strategies to focus on the present:&#8220;At any given moment in the day, simply stop, take a deep breath, and notice where you are, notice what is happening [and] take it all in.Imagine a big brick wall popping up that blocks you from thinking of anything but what’s right in front of you.Get in tune with your senses: Take a walk, feel the ground beneath your feet, smell the flowers in the air, listen to the birds chirping. You will decrease your anxiety and increase your joy by learning to focus on now.&#8221;</p>
 
 				<h3 class="topic_tool down_six">Crisis plan <i class="fas fa-angle-down"></i></h3>
-				<p class="suggestions_tool group_six">Contact your supports or resources, when coping skills aren't enough.</p>
+				<p class="suggestions_tool group_six">Contact your supports or resources, when coping skills aren&#8217;t enough.</p>
 		</div>
 	</div>
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
+	$('body').css('display', 'none');
+	$('body').fadeIn(500);
+	$('a').click(function(e) {
+		e.preventDefault();
+		newLocation = this.href;
+		$('body').fadeOut('slow', newpage);
+	});
+	function newpage() {
+		window.location = newLocation;
+	}
+ 
 	$('.down_one').click(function(){
 		$('.group_one').toggle();
 	})

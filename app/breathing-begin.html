@@ -23,25 +23,26 @@
 		</div>
 		<div class="activity">
 			<div class="activity-description">
-				<h5 class="breathing-text">take a deep breath in through the nose</h5>
-				<h5 class="breathing-text">and out through the mouth</h5>
-				<h5 class="breathing-text">Feel your body press down</h5>
-				<h5 class="breathing-text">Notice the weight of your body</h5>
-				<h5 class="breathing-text">Allow the sounds around you to come and go</h5>
-				<h5 class="breathing-text">Notice your breath</h5>
-				<h5 class="breathing-text">The movement of your body</h5>
-				<h5 class="breathing-text">The rising and falling sensation</h5>
-				<h5 class="breathing-text">Notice how each and every breath is just a little bit different</h5>
-				<h5 class="breathing-text">Realize when your mind has wondered off</h5>
-				<h5 class="breathing-text">and bring your mind back to the breath again</h5>
-				<h5 class="breathing-text">Let go of that thought for a few seconds</h5>
-				<h5 class="breathing-text">Let your mind think if it wants to think</h5>
-				<h5 class="breathing-text">Now bring the attention back to the body</h5>
-				<h5 class="breathing-text">back to that feeling of weight</h5>
-				<h5 class="breathing-text">contact</h5>
-				<h5 class="breathing-text">back to the sounds</h5>
-				<h5 class="breathing-text">and the smells around you</h5>
-				<h5 class="breathing-text">take a moment to appreciate the stillness</h5>
+				<h5 id="breathing-one" class="breathing-text">take a deep breath in through the nose</h5>
+				<h5 id="breathing-two" class="breathing-text">and out through the mouth</h5>
+				<h5 id="breathing-one" class="breathing-text">Feel your body press down</h5>
+				<h5 id="breathing-two" class="breathing-text">Notice the weight of your body</h5>
+				<h5 id="breathing-one" class="breathing-text">Allow the sounds around you to come and go</h5>
+				<h5 id="breathing-two" class="breathing-text">Notice your breath</h5>
+				<h5 id="breathing-one" class="breathing-text">The movement of your body</h5>
+				<h5 id="breathing-two" class="breathing-text">The rising and falling sensation</h5>
+				<h5 id="breathing-one" class="breathing-text">Notice how each and every breath is just a little bit different</h5>
+				<h5 id="breathing-two" class="breathing-text">Realize when your mind has wondered off</h5>
+				<h5 id="breathing-one" class="breathing-text">and bring your mind back to the breath again</h5>
+				<h5 id="breathing-two" class="breathing-text">Let go of that thought for a few seconds</h5>
+				<h5 id="breathing-one" class="breathing-text">Let your mind think if it wants to think</h5>
+				<h5 id="breathing-two" class="breathing-text">Now bring the attention back to the body</h5>
+				<h5 id="breathing-one" class="breathing-text">back to that feeling of weight</h5>
+				<h5 id="breathing-two" class="breathing-text">contact</h5>
+				<h5 id="breathing-one" class="breathing-text">back to the sounds</h5>
+				<h5 id="breathing-two" class="breathing-text">and the smells around you</h5>
+				<h5 id="breathing-one" class="breathing-text">take a moment to appreciate the stillness</h5>
+				<h5 id="breathing-two" class="breathing-text">and remember this feeling of serenity</h5>
 			</div>
 			<div class="pause">
 			<div id="pause-button">pause</div>
@@ -52,17 +53,26 @@
 $(document).ready(function(){
 	var pauseBtn = document.getElementById("pause-button"),
     tl = new TimelineMax();
-
 var tl = new TimelineMax({repeat:0});
 
 $(".breathing-text").each(function(index, element){
-  tl.to(element, 1, {opacity:1, scale:1})
-    .to(element, 3, {opacity:0, scale:1.2, ease:Power2.easeIn}, "+=1")
+  tl.to(element, 1, {opacity:1, scale:1.1})
+    .to(element, 3, {opacity:1, scale:0.9, autoAlpha: 0, ease:Power2.easeIn}, "+=1")
 });
 pauseBtn.onclick = function() {
   tl.paused(!tl.paused());
   pauseBtn.innerHTML = tl.paused() ? "play" : "pause";
 }
+$('body').css('display', 'none');
+	$('body').fadeIn(500);
+	$('a').click(function(e) {
+		e.preventDefault();
+		newLocation = this.href;
+		$('body').fadeOut('slow', newpage);
+	});
+	function newpage() {
+		window.location = newLocation;
+	}
 });
 </script>
 </body>

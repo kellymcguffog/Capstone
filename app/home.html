@@ -52,6 +52,16 @@
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
+	$('body').css('display', 'none');
+	$('body').fadeIn(500);
+	$('a').click(function(e) {
+		e.preventDefault();
+		newLocation = this.href;
+		$('body').fadeOut('slow', newpage);
+	});
+	function newpage() {
+		window.location = newLocation;
+	}
  
 });
 

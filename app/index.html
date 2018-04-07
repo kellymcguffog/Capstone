@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 </head>
 <body class="backgroundImage">
 	<div class="container">
@@ -12,16 +13,16 @@
 			<h3 class="intro-one">SIMPLY SERENE</h3>
 		</div>
 		<div id="wrapper">
-			<div class="menu-area">
-				<a href="home.html"><h5 class="continue">Continue</h5></a>
-			</div>
 			<div class="slide_main">
 				<img class="logo_image" src="logo.png">
 				<h3 class="intro-two">Simply Serene</h3>
 				<p class="intro_text">An interactive web application that offers a range of coping mechanisms to instantly relieve stress and anxiety.</p>
+				<div class="next">
+					<a href="home.html" class="continue">Continue <i class="fas fa-angle-right"></i></a>
+				</div>
 			</div>
 		</div>
-	</div>	
+	</div>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
@@ -31,6 +32,14 @@
  			setTimeout(function(){
  				$('.backgroundImage').toggleClass("colored");
  			}, 3500);
+ 			$('a').click(function(e) {
+				e.preventDefault();
+				newLocation = this.href;
+				$('body').fadeOut('slow', newpage);
+			});
+			function newpage() {
+				window.location = newLocation;
+			}
 		});
 
 	</script>

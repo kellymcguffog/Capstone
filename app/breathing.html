@@ -31,12 +31,18 @@
 		</div>
 	</div>
 <script type="text/javascript">
-// $(document).ready(function(){
-//  setTimeout(function(){
-//  // 	$('.colored').css('background-image', "url(bckgrd-38.svg)");
-//  // 	$('.loading').fadeOut('slow');
-//  // }, 3000);
-// });
+$(document).ready(function(){
+$('body').css('display', 'none');
+	$('body').fadeIn(500);
+	$('a').click(function(e) {
+		e.preventDefault();
+		newLocation = this.href;
+		$('body').fadeOut('slow', newpage);
+	});
+	function newpage() {
+		window.location = newLocation;
+	}
+});
 
 </script>
 </body>
