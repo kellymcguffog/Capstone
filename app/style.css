@@ -519,6 +519,7 @@ img{
   top: 0;
   left: 0;
   background-color: rgba(27, 117, 188);
+  -webkit-background-color:rgba(27, 117, 188);
   display: none;
 }
 #list {
@@ -881,6 +882,7 @@ button[data-setter] {
   fill: none;
   stroke: rgb(27, 117, 188, 0.5);
   stroke-width: 4px;
+  -webkit-text-stroke-color: rgb(27, 117, 188, 0.5);
   transition: stroke-dashoffset 1s;
   transform: rotateY(-180deg) rotateZ(-90deg);
 
