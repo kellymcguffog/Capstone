@@ -518,8 +518,10 @@ img{
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(27, 117, 188);
-  -webkit-background-color:rgba(27, 117, 188);
+  background-color: #1b75bc;
+  -webkit-background-color: #1b75bc;
+  -o-background-color:#1b75bc;
+  -moz-background-color:#1b75bc;
   display: none;
 }
 #list {
@@ -874,15 +876,24 @@ button[data-setter] {
 
 .e-c-base {
   fill: none;
-  stroke: white;
+  stroke: #ffffff;
+  -webkit-stroke-color: #ffffff;
+  -o-stroke-color:#ffffff;
+  -moz-stroke-color:#ffffff;
   stroke-width: 4px
 }
 
 .e-c-progress {
   fill: none;
-  stroke: rgb(27, 117, 188, 0.5);
+  stroke: #1b75bc;
+  opacity: 0.5;
   stroke-width: 4px;
-  -webkit-text-stroke-color: rgb(27, 117, 188, 0.5);
+  /*-webkit-text-stroke: #1b75bc;
+  -o-text-stroke:#1b75bc;
+  -moz-text-stroke:#1b75bc;
+   -webkit-opacity: 0.5;
+  -o-opacity: 0.5;
+  -moz-opacity: 0.5;*/
   transition: stroke-dashoffset 1s;
   transform: rotateY(-180deg) rotateZ(-90deg);
 
