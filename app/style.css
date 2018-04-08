@@ -888,13 +888,15 @@ button[data-setter] {
   stroke: #1b75bc;
   opacity: 0.5;
   stroke-width: 4px;
-  /*-webkit-text-stroke: #1b75bc;
-  -o-text-stroke:#1b75bc;
-  -moz-text-stroke:#1b75bc;
+  /*-webkit-text-stroke-color: #1b75bc;
+  -o-text-stroke-color:#1b75bc;
+  -moz-text-stroke-color:#1b75bc;
    -webkit-opacity: 0.5;
   -o-opacity: 0.5;
   -moz-opacity: 0.5;*/
-  transition: stroke-dashoffset 1s;
+/*  transition: stroke-dashoffset 1s;*/
+/*  -webkit-transition: stroke-dashoffset 1s;*/
+  -webkit-transform: rotateY(-180deg) rotateZ(-90deg);
   transform: rotateY(-180deg) rotateZ(-90deg);
 
 }

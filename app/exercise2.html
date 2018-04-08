@@ -40,7 +40,7 @@
     				<g transform="translate(110,110)">
       					<circle r="100" class="e-c-base"></circle>
       					<g>
-        				<circle r="100" class="e-c-progress"></circle>
+        				<circle r="100" class="e-c-progress" style="stroke:#1b75bc;"></circle>
       					</g>
     				</g>
     			</svg> 
@@ -85,11 +85,6 @@ let length = Math.PI * 2 * 100;
 
 progressBar.style.strokeDasharray = length;
 
-function update(value, timePercent) {
-	var offset = - length - length * value / (timePercent);
-	progressBar.style.strokeDashoffset = offset; 
-	// pointer.style.transform = `rotate(${360 * value / (timePercent)}deg)`; 
-};
 
 //circle ends
 const displayOutput = document.querySelector('.display-remain-time')
@@ -107,8 +102,8 @@ let isPaused = false;
 let isStarted = false;
 
 
-update(wholeTime,wholeTime); //refreshes progress bar
-displayTimeLeft(wholeTime);
+//update(wholeTime,wholeTime); //refreshes progress bar
+//displayTimeLeft(wholeTime);
 
 function changeWholeTime(seconds){
   if ((wholeTime + seconds) > 0){
@@ -138,12 +133,24 @@ for (var i = 0; i < setterBtns.length; i++) {
     });
 }
 
+
+function update(value, timePercent) {
+  var offset = - length - length * value / (timePercent);
+  progressBar.style.strokeDashoffset = offset; 
+
+  // pointer.style.transform = `rotate(${360 * value / (timePercent)}deg)`; 
+};
+
 function timer (seconds){ //counts time, takes seconds
   let remainTime = Date.now() + (seconds * 1000);
-  displayTimeLeft(seconds);
+  //displayTimeLeft(seconds);
   
   intervalTimer = setInterval(function(){
     timeLeft = Math.round((remainTime - Date.now()) / 1000);
+
+    if (timeLeft < 59) {
+      progressBar.style.transition = "stroke-dashoffset 1s";
+    }
     if(timeLeft < 0){
       clearInterval(intervalTimer);
       document.location.href = 'exercise3.html';
@@ -153,12 +160,14 @@ function timer (seconds){ //counts time, takes seconds
         btn.disabled = false;
         btn.style.opacity = 1;
       });
-      displayTimeLeft(wholeTime);
+      //displayTimeLeft(wholeTime);
       pause.style.display = 'block';
       return ;
     }
     displayTimeLeft(timeLeft);
+
   }, 1000);
+
 }
 function pauseTimer(event){
   if(isStarted === false){

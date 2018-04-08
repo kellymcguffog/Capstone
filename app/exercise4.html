@@ -107,8 +107,8 @@ let isPaused = false;
 let isStarted = false;
 
 
-update(wholeTime,wholeTime); //refreshes progress bar
-displayTimeLeft(wholeTime);
+//update(wholeTime,wholeTime); //refreshes progress bar
+//displayTimeLeft(wholeTime);
 
 function changeWholeTime(seconds){
   if ((wholeTime + seconds) > 0){
@@ -140,10 +140,13 @@ for (var i = 0; i < setterBtns.length; i++) {
 
 function timer (seconds){ //counts time, takes seconds
   let remainTime = Date.now() + (seconds * 1000);
-  displayTimeLeft(seconds);
+  //displayTimeLeft(seconds);
   
   intervalTimer = setInterval(function(){
     timeLeft = Math.round((remainTime - Date.now()) / 1000);
+    if (timeLeft < 59) {
+      progressBar.style.transition = "stroke-dashoffset 1s";
+    }
     if(timeLeft < 0){
       clearInterval(intervalTimer);
       document.location.href = 'exercise5.html';
@@ -153,7 +156,7 @@ function timer (seconds){ //counts time, takes seconds
         btn.disabled = false;
         btn.style.opacity = 1;
       });
-      displayTimeLeft(wholeTime);
+      //displayTimeLeft(wholeTime);
       pause.style.display = 'block';
       return ;
     }
