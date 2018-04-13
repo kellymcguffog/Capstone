@@ -72,14 +72,14 @@
 $(document).ready(function(){
     $('body').css('display', 'none');
     $('body').fadeIn(500);
-    $('a').click(function(e) {
-        e.preventDefault();
-        newLocation = this.href;
-        $('body').fadeOut('slow', newpage);
-    });
-    function newpage() {
-        window.location = newLocation;
-    }
+    // $('a').click(function(e) {
+    //     e.preventDefault();
+    //     newLocation = this.href;
+    //     $('body').fadeOut('slow', newpage);
+    // });
+    // function newpage() {
+    //     window.location = newLocation;
+    // }
  
     function start_puzzle(x){
         $('#puzzle_solved').hide();

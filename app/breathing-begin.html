@@ -19,33 +19,42 @@
 			<div class="logo">
 				<h5 class="simply-logo">Simply serene</h5>
 			</div>
-			<div class="space"></div>
+			<div class="restart">
+				<img id="restart" src="restart.png">
+			</div>
 		</div>
 		<div class="activity">
 			<div class="activity-description">
-				<h5 id="breathing-one" class="breathing-text">take a deep breath in through the nose</h5>
-				<h5 id="breathing-two" class="breathing-text">and out through the mouth</h5>
-				<h5 id="breathing-one" class="breathing-text">Feel your body press down</h5>
-				<h5 id="breathing-two" class="breathing-text">Notice the weight of your body</h5>
-				<h5 id="breathing-one" class="breathing-text">Allow the sounds around you to come and go</h5>
-				<h5 id="breathing-two" class="breathing-text">Notice your breath</h5>
-				<h5 id="breathing-one" class="breathing-text">The movement of your body</h5>
-				<h5 id="breathing-two" class="breathing-text">The rising and falling sensation</h5>
-				<h5 id="breathing-one" class="breathing-text">Notice how each and every breath is just a little bit different</h5>
-				<h5 id="breathing-two" class="breathing-text">Realize when your mind has wondered off</h5>
-				<h5 id="breathing-one" class="breathing-text">and bring your mind back to the breath again</h5>
-				<h5 id="breathing-two" class="breathing-text">Let go of that thought for a few seconds</h5>
-				<h5 id="breathing-one" class="breathing-text">Let your mind think if it wants to think</h5>
-				<h5 id="breathing-two" class="breathing-text">Now bring the attention back to the body</h5>
-				<h5 id="breathing-one" class="breathing-text">back to that feeling of weight</h5>
-				<h5 id="breathing-two" class="breathing-text">contact</h5>
-				<h5 id="breathing-one" class="breathing-text">back to the sounds</h5>
-				<h5 id="breathing-two" class="breathing-text">and the smells around you</h5>
-				<h5 id="breathing-one" class="breathing-text">take a moment to appreciate the stillness</h5>
-				<h5 id="breathing-two" class="breathing-text">and remember this feeling of serenity</h5>
+				<h5 class="breathing-text">take a deep&nbsp;breath</h5>
+				<h5 class="breathing-text">in through your nose and out through your&nbsp;mouth</h5>
+				<h5 class="breathing-text">feel your body press down on the floor beneath&nbsp;you</h5>
+				<h5 class="breathing-text">Notice the weight of your&nbsp;body</h5>
+				<h5 class="breathing-text">And just&nbsp;Breathe</h5>
+				<h5 class="breathing-text">Allow the sounds around you to come and&nbsp;go</h5>
+				<h5 class="breathing-text">Notice your&nbsp;breath</h5>
+				<h5 class="breathing-text">The movement of your&nbsp;body</h5>
+				<h5 class="breathing-text">In and Out</h5>
+				<h5 class="breathing-text">The rising and falling&nbsp;sensation</h5>
+				<h5 class="breathing-text">In and Out</h5>
+				<h5 class="breathing-text">Notice how each and every breath is just a little bit&nbsp;different</h5>
+				<h5 class="breathing-text">Breathe</h5>
+				<h5 class="breathing-text">Realize when your mind has wondered&nbsp;off</h5>
+				<h5 class="breathing-text">And when it has bring your mind back to the breath&nbsp;again</h5>
+				<h5 class="breathing-text">Continue breathing</h5>
+				<h5 class="breathing-text">Let go of that thought for a few&nbsp;seconds</h5>
+				<h5 class="breathing-text">Let your mind think if it wants to&nbsp;think</h5>
+				<h5 class="breathing-text">Continue breathing</h5>
+				<h5 class="breathing-text">Now bring the attention back to the&nbsp;body</h5>
+				<h5 class="breathing-text">back to that feeling of&nbsp;weight</h5>
+				<h5 class="breathing-text">That feeling of&nbsp;contact</h5>
+				<h5 class="breathing-text">back to the&nbsp;sounds</h5>
+				<h5 class="breathing-text">and the smells around&nbsp;you</h5>
+				<h5 class="breathing-text">take a moment to appreciate the&nbsp;stillness</h5>
+				<h5 class="breathing-text">and remember this feeling of&nbsp;serenity</h5>
+				<h5 id="final"></h5>
 			</div>
 			<div class="pause">
-			<div id="pause-button">pause</div>
+			<div id="pause-button">Play</div>
 			</div>
 		</div>
 	</div>
@@ -53,12 +62,23 @@
 $(document).ready(function(){
 	var pauseBtn = document.getElementById("pause-button"),
     tl = new TimelineMax();
-var tl = new TimelineMax({repeat:0});
+var tl = new TimelineMax({onComplete:myFunction, repeat:0, paused:true});
 
 $(".breathing-text").each(function(index, element){
   tl.to(element, 1, {opacity:1, scale:1.1})
     .to(element, 3, {opacity:1, scale:0.9, autoAlpha: 0, ease:Power2.easeIn}, "+=1")
 });
+$("#restart").click(function() {
+        tl.restart();
+        document.getElementById('final').style.display='none';
+});
+function myFunction(){
+	tl.restart();
+	tl.pause(0);
+	pauseBtn.innerHTML = tl.paused() ? "play" : "pause";
+	
+};
+	
 pauseBtn.onclick = function() {
   tl.paused(!tl.paused());
   pauseBtn.innerHTML = tl.paused() ? "play" : "pause";

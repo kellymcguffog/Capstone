@@ -9,7 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body class="backgroundImage">
-	<div class="container">
+	<div class="container_discussion">
 		<div class="header">
 			<div class="back">
 				<a href="home.html"><img src="arrow.png" class="home"></a>
@@ -22,21 +22,24 @@
 		<div class="activity">
 			<div class="discussion-activity-description">
 				<div class="question">
-				<h1 class="step">Step Three:</h1>
-				<h3 class="topic">Ways of Thinking</h3>
-				<p class="suggestions"><b>Coping Statement.</b> Try coming up with statements that remind you how you can cope with a situation.<br><br> For example, &#8220;If I get anxious, I will try some calm breathing&#8221;; &#8220;I just need to do my best&#8221;; or &#8220;This has happened before and I know how to handle it&#8221;;</p>
-				<input size="35"></input>
-				<p class="suggestions"><b>Positive Self-Statement.</b> Regularly practice being &#8220;kind&#8221; to yourself (say positive things about yourself), rather than being overly self-critical.<br><br> For example, instead of saying, &#8220;I will fail&#8221;, say something like, &#8220;I can do it&#8221;; or, &#8220;I&#8217;m strong for challenging myself to face the things that scare me&#8221;.</p>
-				<input size="35"></input>
+					<h1 class="step">Step Three:</h1>
+					<h3 class="topic">Ways of Thinking</h3>
+					<p class="suggestions"><b>Coping Statement.</b> Try coming up with statements that remind you how you can cope with a&nbsp;situation.<br><br> For example, &#8220;If I get anxious, I will try some calm breathing&#8221;; &#8220;I just need to do my best&#8221;; or &#8220;This has happened before and I know how to handle&nbsp;it&#8221;;</p>
+					<input size="35"></input>
+					<p class="suggestions"><b>Positive Self-Statement.</b> Regularly practice being &#8220;kind&#8221; to yourself (say positive things about yourself), rather than being overly self-critical.<br><br> For example, instead of saying, &#8220;I will fail&#8221;, say something like, &#8220;I can do it&#8221;; or, &#8220;I&#8217;m strong for challenging myself to face the things that scare&nbsp;me&#8221;.</p>
+					<input size="35"></input>
 				</div>
-				<div class="start">
-				<a id="start-button" href="discussion-begin-two.html">Previous</a>
+				<div class="discussion-buttons">
+					<a class="discussion-button" href="discussion.html">Complete</a>
 				</div>
+			</div>
 		</div>
 	</div>
-</div>
 <script type="text/javascript">
 $(document).ready(function(){
+	$(window).scroll(function() {
+		$(".scrollDown").css("opacity", 1 - $(window).scrollTop() / ($('.scrollDown').height() / 2));
+ });
 $('body').css('display', 'none');
 	$('body').fadeIn(500);
 	$('a').click(function(e) {
