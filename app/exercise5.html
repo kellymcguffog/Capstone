@@ -19,7 +19,9 @@
 			<div class="logo">
 				<h5 class="simply-logo">Simply serene</h5>
 			</div>
-      <div class="space"></div>
+      <div class="restart">
+        <img id="restart" src="restart.png">
+      </div>
 		</div>
 		<div id="workout">
 		<h3 id="workout" class="jump">Squat Jump</h3>
@@ -164,6 +166,15 @@ function timer (seconds){ //counts time, takes seconds
     displayTimeLeft(timeLeft);
   }, 1000);
 }
+$('#restart').click(function(){
+  clearInterval(intervalTimer);
+  clearInterval(intervalTimer);
+      play.style.display = 'block';
+      pause.style.display = 'none';
+      isStarted = false;
+     
+      displayTimeLeft(wholeTime);
+})
 function pauseTimer(event){
   if(isStarted === false){
     timer(wholeTime);
