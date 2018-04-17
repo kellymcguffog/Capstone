@@ -1,6 +1,9 @@
 body{
   display: none;
 }
+.backgroundImage{
+	display: none;
+}
 @media(min-width: 300px) and (max-width: 800px){
 html{
  width: 100%;
@@ -47,6 +50,14 @@ body{
   transform: translate(-50%, -50%);
   width: 100%;
 }
+#replay{
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  text-align: center;
+  margin: auto;
+  font-size: 13px;
+  color: #6d6e71;
+}
 .breathing-intro, .music-intro, .puzzle-intro, .exercise-intro, .tool-intro, .discussion-intro{
   width: 35%;
   height: auto;
@@ -62,6 +73,10 @@ body{
   line-height: 32px;
   text-align: center;
   text-transform: uppercase;
+  width: 80%;
+  display: block;
+  margin: auto;
+  margin-bottom: 5%;
 }
 .start-page{
   color: #6d6e71;
@@ -89,7 +104,7 @@ body{
   display: block;
 }
 .start, .pause{
-  position: fixed;
+  position: absolute;
   bottom: 0;
   left: 0;
   background-color: rgba(27, 117, 188, 0.5);
@@ -267,6 +282,7 @@ p{
 }
 a{
   text-decoration: none;
+  color: #6d6e71;
 }
 .path{
   color: white;
@@ -741,6 +757,10 @@ text-align: center;
     from { letter-spacing:0px; opacity: 0; }
     to   { letter-spacing:4px; opacity: 1; }
 }
+.bullets a{
+	display: list-item;
+	margin-left: 1em;
+}
 .suggestions{
   font-family: 'Raleway', sans-serif;
   color: #6d6e71;
@@ -748,7 +768,7 @@ text-align: center;
   font-size: 17px;
   line-height: 23px;
   text-align: center;
-  width: 100%;
+ /* width: 100%;*/
 }
 input{
   display: block;
@@ -759,7 +779,7 @@ input{
   background: none;
   border-bottom: 1px solid #6d6e71;
 }
-.suggestions_tool, .group_seven, .sourcing, .source{
+.suggestions_tool{
    font-family: 'Raleway', sans-serif;
   color: #6d6e71;
   display: block;
@@ -769,7 +789,10 @@ input{
   width: 100%;
   margin-bottom: 5%;
   width: 80%;
+}
+.suggestions_tool{
   animation: movingIn 3s;
+  padding-left: 0;
 }
 @keyframes movingIn {
     from { margin-left: 0; opacity: 0; }
@@ -792,8 +815,23 @@ input{
   margin-top: 10%;
   overflow-y:scroll;
 }
-.question{
+.ten{
+	margin-bottom: 15%;
+}
+.answer_questions{
+	 -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 3s; /* Firefox < 16 */
+        -ms-animation: fadein 3s; /* Internet Explorer */
+         -o-animation: fadein 3s; /* Opera < 12.1 */
+            animation: fadein 3s;
+  display: block;
+  margin: auto;
   width: 80%;
+}
+.last{
+	margin-bottom: 5%;
+}
+.question{
     -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
        -moz-animation: fadein 3s; /* Firefox < 16 */
         -ms-animation: fadein 3s; /* Internet Explorer */
@@ -801,6 +839,10 @@ input{
             animation: fadein 3s;
   display: block;
   margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 @keyframes fadein {
     from { opacity: 0; }
@@ -920,7 +962,7 @@ button[data-setter] {
    -webkit-opacity: 0.5;
   -o-opacity: 0.5;
   -moz-opacity: 0.5;*/
-/*  transition: stroke-dashoffset 1s;*/
+  transition: stroke-dashoffset 1s;
 /*  -webkit-transition: stroke-dashoffset 1s;*/
   -webkit-transform: rotateY(-180deg) rotateZ(-90deg);
   transform: rotateY(-180deg) rotateZ(-90deg);

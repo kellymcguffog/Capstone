@@ -34,12 +34,14 @@
             <div class="logo">
                 <h5 class="simply-logo">Simply serene</h5>
             </div>
-            <div class="space"></div>
+            <div class="restart">
+                <a id="start-button" class="restart-puzzle" data-grid="3"><img id="restart" src="restart.png"></a>
+            </div>
         </div>
         <div class="difficulty_levels">
             <h3 class="difficulty">Choose a Difficulty level:</h3>
             <div class="beginner">
-                <img class="piece" src="beginner.png"><a href="#" class="level restart-puzzle" data-grid="5">Beginner</a>
+                <img class="piece" src="beginner.png"><a href="#" class="level restart-puzzle" data-grid="3">Beginner</a>
             </div>
             <div class="intermediate">
                 &nbsp; <img class="piece" src="intermediate.png"><a href="#" class="level restart-puzzle" data-grid="7">Intermediate</a>
@@ -58,15 +60,16 @@
                 <div class="pure-u-1 pure-u-md-1-2">
                     <div id="pile" style="margin:10px">
                         <div id="puzzle_solved" style="display:none;text-align:center;position:relative;top:25%">
-                            <h2 class="congrats" style="margin:0 0 20px">Well done!</h2>
+                            <h2 class="congrats" style="margin:0 0 0">Well done!</h2>
+                            <a id="replay" style="margin:0 0 20px" class="restart-puzzle" data-grid="3">Replay?</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="start">
+        <!-- <div class="start">
         <a id="start-button" class="restart-puzzle" data-grid="3">Restart</a>
-        </div>
+        </div> -->
     </div>
 <script type="text/javascript">
 $(document).ready(function(){

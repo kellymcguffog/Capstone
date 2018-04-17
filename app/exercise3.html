@@ -65,12 +65,12 @@
 <script src="timer.js"></script> -->
 <script type="text/javascript">
 $(document).ready(function() {
-  $('body').css('display', 'none');
-  $('body').fadeIn(500);
+  $('.container').css('display', 'none');
+  $('.container').fadeIn(500);
   $('a').click(function(e) {
     e.preventDefault();
     newLocation = this.href;
-    $('body').fadeOut('slow', newpage);
+    $('.container').fadeOut('slow', newpage);
   });
   function newpage() {
     window.location = newLocation;
@@ -86,7 +86,7 @@ let length = Math.PI * 2 * 100;
 progressBar.style.strokeDasharray = length;
 
 function update(value, timePercent) {
-	var offset = - length - length * value / (timePercent);
+	var offset = length - length * value / (timePercent);
 	progressBar.style.strokeDashoffset = offset; 
 	// pointer.style.transform = `rotate(${360 * value / (timePercent)}deg)`; 
 };
@@ -144,9 +144,9 @@ function timer (seconds){ //counts time, takes seconds
   
   intervalTimer = setInterval(function(){
     timeLeft = Math.round((remainTime - Date.now()) / 1000);
-    if (timeLeft < 59) {
-      progressBar.style.transition = "stroke-dashoffset 1s";
-    }
+    // if (timeLeft < 59) {
+    //   progressBar.style.transition = "stroke-dashoffset 1s";
+    // }
     if(timeLeft < 0){
       clearInterval(intervalTimer);
       document.location.href = 'exercise4.html';

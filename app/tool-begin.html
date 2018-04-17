@@ -67,15 +67,18 @@
 				<p class="suggestions_tool group_six">Contact your supports or resources, when coping skills aren&#8217;t&nbsp;enough.</p>
 				
 				<h3 class="topic_tool down_seven">Sources <i class="fas fa-angle-down"></i></h3>
-					<ul class="suggestions_tool group_seven">For more information please&nbsp;visit:<br><br>
-				<ul class="sourcing">
-					<li><a class="source" href="https://www.stress.org/take-a-deep-breath/">Deep Breathing</a></li>
-					<li><a class="source" href="https://www.inc.com/melanie-curtin/neuroscience-says-listening-to-this-one-song-reduces-anxiety-by-up-to-65-percent.html">Top 10 Most Relaxing&nbsp;Songs</a></li>
-					<li><a class="source" href="https://www.huffingtonpost.com/ben-michaelis-phd/stress-beats-anxiety_b_962643.html">3 Ways Stress Can Help&nbsp;Beat&nbsp;Anxiety</a></li>
-					<li><a class="source" href="https://adaa.org/understanding-anxiety/related-illnesses/other-related-conditions/stress/physical-activity-reduces-st">Physical Activity Reduces&nbsp;Stress</a></li>
-					<li><a class="source" href="https://www.anxietybc.com/sites/default/files/RealisticThinking.pdf">Realistic Thinking</a></li>
-					<li><a class="source" href="http://cognitive-psychiatry.com/how-to-reduce-stress-without-medication/">How to Reduce Stress and&nbsp;Anxiety</a></li>
-					<li><a class="source" href="http://www.thectcenter.com/tips-for-parents/how-to-make-a-coping-skills-toolbox/">A Coping Skills&nbsp;Toolbox</a></li></ul></ul>
+				
+					<p class="group_seven suggestions_tool">For more information please&nbsp;visit:
+					</p>
+				<p class="group_seven bullets suggestions_tool">
+					<a href="https://www.stress.org/take-a-deep-breath/">Deep Breathing</a>
+					<a href="https://www.inc.com/melanie-curtin/neuroscience-says-listening-to-this-one-song-reduces-anxiety-by-up-to-65-percent.html">Top 10 Most Relaxing&nbsp;Songs</a>
+					<a href="https://www.huffingtonpost.com/ben-michaelis-phd/stress-beats-anxiety_b_962643.html">3 Ways Stress Can Help&nbsp;Beat&nbsp;Anxiety</a>
+					<a href="https://adaa.org/understanding-anxiety/related-illnesses/other-related-conditions/stress/physical-activity-reduces-st">Physical Activity Reduces&nbsp;Stress</a>
+					<a href="https://www.anxietybc.com/sites/default/files/RealisticThinking.pdf">Realistic Thinking</a>
+					<a href="http://cognitive-psychiatry.com/how-to-reduce-stress-without-medication/">How to Reduce Stress and&nbsp;Anxiety</a>
+					<a href="http://www.thectcenter.com/tips-for-parents/how-to-make-a-coping-skills-toolbox/">A Coping Skills&nbsp;Toolbox</a></p>
+					
 		</div>
 	</div>
 </div>
@@ -94,8 +97,8 @@ $(document).ready(function(){
 
 	$('p').hide();
 	$('.group_seven').hide();
-	$('.source').hide();
-	$('.sourcing').hide();
+	// $('.source').hide();
+	// $('.sourcing').hide();
  
 	$('.down_one').click(function(){
 		$('.group_one').toggle();
@@ -117,8 +120,8 @@ $(document).ready(function(){
 	})
 	$('.down_seven').click(function(){
 		$('.group_seven').toggle();
-		$('.source').toggle();
-		$('.sourcing').toggle();
+		// $('.source').toggle();
+		// $('.sourcing').toggle();
 	})
 });
 
