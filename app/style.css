@@ -1304,7 +1304,7 @@ p{
   display: inline-block;
 }
 .breathing-symbol, .music-symbol, .puzzle-symbol, .exercise-symbol, .discussion-symbol, .tool-symbol{
-  width: 60%;
+  width: 55%;
   height: auto;
 }
 .activity-one, .activity-two, .activity-three, .activity-four, .activity-five, .activity-six{

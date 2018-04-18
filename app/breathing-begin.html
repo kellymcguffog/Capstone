@@ -70,6 +70,8 @@ $(".breathing-text").each(function(index, element){
 });
 $("#restart").click(function() {
         tl.restart();
+        tl.pause(0);
+        pauseBtn.innerHTML = tl.paused() ? "play" : "pause";
         document.getElementById('final').style.display='none';
 });
 function myFunction(){
