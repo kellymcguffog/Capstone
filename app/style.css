@@ -1304,7 +1304,7 @@ p{
   display: inline-block;
 }
 .breathing-symbol, .music-symbol, .puzzle-symbol, .exercise-symbol, .discussion-symbol, .tool-symbol{
-  width: 55%;
+  width: 50%;
   height: auto;
 }
 .activity-one, .activity-two, .activity-three, .activity-four, .activity-five, .activity-six{
@@ -1321,7 +1321,8 @@ p{
 .row-one, .row-two, .row-three{
   display: flex;
   justify-content: center;
-    align-items: center;
+  align-items: center;
+  margin-bottom: 3%;
 }
 .music, .breathing, .puzzle, .exercise, .discussion, .tool{
   font-family: 'Raleway', sans-serif;
