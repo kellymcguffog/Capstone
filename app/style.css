@@ -16,6 +16,9 @@ body{
 body{
   display: block;
 }
+.main{
+  overflow-y:scroll; 
+}
 .backgroundImage{
   height: 100%;
   width: 100%;
@@ -1068,6 +1071,9 @@ button[data-setter] {
 }
 body{
   display: block;
+}
+.main{
+  overflow-y:scroll; 
 }
 .backgroundImage{
   height: 100%;
