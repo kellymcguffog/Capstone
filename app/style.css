@@ -1,4 +1,4 @@
-  body{
+body{
   display: none;
 }
 .backgroundImage{
@@ -850,6 +850,7 @@ input{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
 }
 @keyframes fadein {
     from { opacity: 0; }
@@ -1896,6 +1897,7 @@ input{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
 }
 @keyframes fadein {
     from { opacity: 0; }
