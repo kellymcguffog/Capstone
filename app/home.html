@@ -49,7 +49,7 @@
 				<h5 class="tool">toolbox</h5>
 			</a>
 		</div>
-		<div class="footer" style="height: 44px;"></div>
+		<div class="footer" style="height: 100px;"></div>
 </div>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -63,9 +63,8 @@ $(document).ready(function(){
 	function newpage() {
 		window.location = newLocation;
 	}
-	$(".footer").scroll(function(event){
-    event.preventDefault();
-});
+	
+	document.ontouchmove = function(e){ e.preventDefault(); }
  
 });
 
