@@ -3399,7 +3399,7 @@ p{
   display: inline-block;
 }
 .breathing-symbol, .music-symbol, .puzzle-symbol, .exercise-symbol, .discussion-symbol, .tool-symbol{
-  width: 45%;
+  width: 50%;
   height: auto;
 }
 .activity-one, .activity-two, .activity-three, .activity-four, .activity-five, .activity-six{
@@ -3442,10 +3442,9 @@ a{
   letter-spacing: 4px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 10px;
 }
 .simply-logo{
-  margin: 10px;
+  margin: 5px;
   color: white;
   font-family: 'Raleway', sans-serif;
   font-weight: 300;
