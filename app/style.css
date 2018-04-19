@@ -1053,13 +1053,10 @@ html{
 }
 @media only screen 
 and (min-width: 300px) and (max-width: 500px) 
-and (min-height: 500px) and (max-height: 800px){
+and (min-height: 680px) and (max-height: 800px){
   html{
   display: block;
 }
-.music, .breathing, .puzzle, .exercise, .discussion, .tool{
-  /*font-size: 13px;*/
-  }
 .breathing-symbol, .music-symbol, .puzzle-symbol, .exercise-symbol, .discussion-symbol, .tool-symbol{
   width: 55%;
 }
@@ -1067,6 +1064,10 @@ and (min-height: 500px) and (max-height: 800px){
 @media only screen
 and (max-height: 680px){
   .breathing-symbol, .music-symbol, .puzzle-symbol, .exercise-symbol, .discussion-symbol, .tool-symbol{
-  width: 45%;
+  width: 50%;
 }
+.music, .breathing, .puzzle, .exercise, .discussion, .tool{
+  font-size: 13px;
+  margin: 5%;
+  }
 }
