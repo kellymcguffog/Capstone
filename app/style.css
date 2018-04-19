@@ -1049,7 +1049,7 @@ and (max-height: 650px){
   display: block;
 }
   .breathing-symbol, .music-symbol, .puzzle-symbol, .exercise-symbol, .discussion-symbol, .tool-symbol{
-  width: 50%;
+  width: 45%;
 }
 .music, .breathing, .puzzle, .exercise, .discussion, .tool{
   font-size: 13px;
