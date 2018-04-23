@@ -18,17 +18,17 @@
 		</div>
 	</div>
 	<script type="text/javascript">
-			(function(){
-				$('body').css('display', 'none');
-				$('body').fadeIn(500);
-				$('a').click(function(e) {
-					e.preventDefault();
-					newLocation = this.href;
-					$('body').fadeOut('slow', newpage);
-				});
-				function newpage() {
-					window.location = newLocation;
-				}
+        (function(){
+            $('body').css('display', 'none');
+            $('body').fadeIn(500);
+            $('a').click(function(e) {
+                e.preventDefault();
+                newLocation = this.href;
+                $('body').fadeOut('slow', newpage);
+                });
+                function newpage() {
+                    window.location = newLocation;
+                }
  
 	  			var arrays = [
 	    			{ quote:"&#8220;At the end of the day, tell yourself gently: &#8216;I love you, you did the best you could today, and even if you didn&#8217;t accomplish all you had planned, I love you&nbsp;anyway.&#8217;&#8221;",
@@ -82,7 +82,7 @@
 	  			];
 	  			
 	  			var floatIndex = (Math.random()*arrays.length);
-	  			var randomIndex = Math.round(floatIndex);
+	  			var randomIndex = Math.floor(floatIndex);
 	  			var selectedQuote =arrays[randomIndex];
 	  			
 	  			document.getElementById("quote").innerHTML = '<div><span class="q">' + selectedQuote.quote + '</span><span class="a"><br><br>' + selectedQuote.author + '</span></div>';

@@ -82,7 +82,7 @@
 	  			];
 	  			
 	  			var floatIndex = (Math.random()*arrays.length);
-	  			var randomIndex = Math.round(floatIndex);
+	  			var randomIndex = Math.floor(floatIndex);
 	  			var selectedQuote =arrays[randomIndex];
 	  			
 	  			document.getElementById("quote").innerHTML = '<div><span class="q">' + selectedQuote.quote + '</span><span class="a"><br><br>' + selectedQuote.author + '</span></div>';
