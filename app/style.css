@@ -242,6 +242,15 @@ p{
   text-align: center;
   position: relative;
 }
+.header_discussion{
+  background-color: #81b2db;
+  z-index: 999;
+  padding-top: 3%;
+  padding-bottom: 3%;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+}
 .space{
   width: 9%;
   display: inline-block;
@@ -374,7 +383,7 @@ img{
   line-height: 23px;
   letter-spacing: 4px;
   text-transform: uppercase;
-  margin-top: 5%;
+  margin-top: 10%;
   color: #6d6e71;
  
 }
@@ -811,7 +820,7 @@ input{
 .discussion-activity-description{
   margin: 0 auto;
   width: 100%;
-  margin-top: 10%;
+  margin-top: 20%;
   overflow-y:scroll;
 }
 .ten{
@@ -984,7 +993,7 @@ button[data-setter] {
   text-transform: uppercase;
   letter-spacing: 4px;
   text-align: center;
-  margin-top: 5%;
+  margin-top: 10%;
 }
 .suggestions_listed{
   text-align: center;
